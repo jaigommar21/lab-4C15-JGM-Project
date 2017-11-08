@@ -93,10 +93,15 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	@Override
 	public void update(String  login, String password, String lastname, String firstname, int salary, int dptId) throws DAOException {
 
-		String query = "UPDATE employees SET password = ?, first_name =?, last_name = ?, salary = ?, department_id = ? WHERE login = ?";
+//		String query = "UPDATE employees SET password = ?, first_name =?, last_name = ?, salary = ?, department_id = ? WHERE login = ?";
+//
+//		Object[] params = new Object[] { password, lastname, firstname, salary, dptId, login };
 
-		Object[] params = new Object[] { password, lastname, firstname, salary, dptId, login };
+		String query = "UPDATE employees SET password = ?, first_name =?, last_name = ?, salary = ? WHERE login = ?";
 
+		Object[] params = new Object[] { password, lastname, firstname, salary, login };
+
+		
 		try {
 			jdbcTemplate.update(query, params);
 		} catch (Exception e) {
