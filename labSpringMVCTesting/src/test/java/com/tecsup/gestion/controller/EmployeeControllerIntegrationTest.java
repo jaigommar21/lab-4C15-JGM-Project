@@ -71,12 +71,12 @@ public class EmployeeControllerIntegrationTest {
                 .andExpect(status().isOk())
                 .andExpect(view().name("admin/emp/editform"))
                 .andExpect(forwardedUrl("/WEB-INF/views/admin/emp/editform.jsp"))
-                .andExpect(model().attribute("command", hasProperty("employeeId", is(100))))
-                .andExpect(model().attribute("command", hasProperty("login", is("jgomez"))))
-                .andExpect(model().attribute("command", hasProperty("password", is("123456"))))
-                .andExpect(model().attribute("command", hasProperty("firstname", is("Jaime"))))
-                .andExpect(model().attribute("command", hasProperty("lastname", is("Gomez"))))
-                .andExpect(model().attribute("command", hasProperty("salary", is(2505))))
+                .andExpect(model().attribute("employee", hasProperty("employeeId", is(100))))
+                .andExpect(model().attribute("employee", hasProperty("login", is("jgomez"))))
+                .andExpect(model().attribute("employee", hasProperty("password", is("123456"))))
+                .andExpect(model().attribute("employee", hasProperty("firstname", is("Jaime"))))
+                .andExpect(model().attribute("employee", hasProperty("lastname", is("Gomez"))))
+                .andExpect(model().attribute("employee", hasProperty("salary", is(2505))))
                 //.andExpect(model().attribute("command", 
                 //		hasProperty("department", hasProperty("departmentId",is(12)))))
             ;

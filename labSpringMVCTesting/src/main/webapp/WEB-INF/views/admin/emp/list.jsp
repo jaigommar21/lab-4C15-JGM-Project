@@ -19,6 +19,13 @@
 			<div class="col-md-8">
 				<h4 class="text-center">Employees</h4>
 				<hr>
+					<a href="<%=request.getContextPath()%>/admin/emp/createform"
+					class="btn btn-success"><i class="glyphicon glyphicon-edit"></i>
+					Create Employee</a>
+					<a href="<%=request.getContextPath()%>/admin/menu"
+					class="btn btn-primary"><i class="glyphicon glyphicon-edit"></i>
+					Menu</a>
+				<br/> 
 				<table class="table table-bordered table-striped">
 					<thead>
 						<tr>
@@ -63,12 +70,7 @@
 						</c:forEach>
 					</tbody>
 				</table>
-				<br /> <a href="<%=request.getContextPath()%>/admin/emp/createform"
-					class="btn btn-success"><i class="glyphicon glyphicon-edit"></i>
-					Create Employee</a>
-					<a href="<%=request.getContextPath()%>/admin/menu"
-					class="btn btn-primary"><i class="glyphicon glyphicon-edit"></i>
-					Menu</a>
+
 			</div>
 			<font color="red">${message}</font>
 		</div>

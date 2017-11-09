@@ -27,7 +27,7 @@
 		<beans:property name="dataSource" ref="dataSource" />
 	</beans:bean>
 
-
+	 <!-- 
 	<beans:bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
@@ -36,7 +36,7 @@
 		<beans:property name="password" value="" />
 	</beans:bean>
 
-	 <!-- 
+	-->
 	<beans:bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
@@ -44,5 +44,27 @@
 		<beans:property name="username" value="4C15" />
 		<beans:property name="password" value="4C15" />
 	</beans:bean>
-		-->
+	
+	<!--
+        - Message source for this context, loaded from localized "messages_xx" files.
+        - Files are stored inside src/main/resources
+    -->
+    
+	<!-- Fuente de mensajes: Necesario para los mensajes de vaidacion  -->
+
+	<!--  
+	<beans:bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" >
+		<beans:property name="validationMessageSource" ref="messageSource"/>
+	</beans:bean>
+	-->
+    <beans:bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource" >
+    	<beans:property name="basename" value="messages" />
+    </beans:bean> 
+        
+	
+	<!--  
+	<beans:bean class="org.springframework.validation.beanvalidation.MethodValidationPostProcessor">
+        <beans:property name="validator" ref="validator"/>
+    </beans:bean>
+	-->
 </beans:beans>

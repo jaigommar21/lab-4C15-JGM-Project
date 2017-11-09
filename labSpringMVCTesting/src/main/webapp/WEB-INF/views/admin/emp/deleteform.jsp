@@ -11,54 +11,44 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	
-<style>
-	.error {color: #ff0000; }
-</style>
-	
 </head>
 <body>
 
 	<div class="container-fluid">
 		<div class="row-fluid">
 			<div class="col-md-6">
-				<h4 class="text-center">Edit Employee</h4>
+				<h4 class="text-center">Delete Employee</h4>
 				<hr>
-				<form:form method="post"  servletRelativeAction="/admin/emp/editsave" modelAttribute="employee" >
+				<form:form method="post" servletRelativeAction="/admin/emp/delete" modelAttribute="employee" >
 					<form:hidden path="employeeId" />
 					<div class="form-group">
 						<label for="login">Login: </label>
 						<form:input path="login" class="form-control" readonly="true" />
-							
 					</div>
 					<div class="form-group">
 						<label for="password">Password: </label>
-						<form:input path="password" class="form-control" />
-						<form:errors path="password" cssClass="error" />
+						<form:input path="password" class="form-control" readonly="true" />
 					</div>
 					<div class="form-group">
 						<label for="firstname">Firstname: </label>
-						<form:input path="firstname" class="form-control" />
-						<form:errors path="firstname" cssClass="error" />			
+						<form:input path="firstname" class="form-control" readonly="true" />
 					</div>
 					<div class="form-group">
 						<label for="lastname">Lastname: </label>
-						<form:input path="lastname" class="form-control" />
-						<form:errors path="lastname" cssClass="error" />
+						<form:input path="lastname" class="form-control"  readonly="true"/>
 					</div>
 					<div class="form-group">
 						<label for="salary">Salary: </label>
-						<form:input path="salary" class="form-control" />
-						<form:errors path="salary" cssClass="error" />
+						<form:input path="salary" class="form-control" readonly="true"/>
 					</div>
 					<%-- 
 					<div class="form-group">
 						<label for="department.departmentId">Department: </label>
-						<form:select path="department.departmentId" items="${departmentList}" />
+						<form:select path="department.departmentId" items="${departmentList}"  disabled="true" />
 					</div>
-					--%>	
+					--%>		
 					<div class="form-group">
-						<input type="submit" value="Save" class="btn btn-success" />
+						<input type="submit" value="Delete" class="btn btn-success" />
 						<a href="<%=request.getContextPath()%>/admin/emp/list" class="btn btn-danger">Cancel</a>
 					</div>
 				</form:form>

@@ -56,19 +56,14 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
 		Object[] params = new Object[] { login, password, lastname, firstname, salary, dptId };
 
-		Employee emp = null;
+		//Employee emp = null;
 		
 		try {
 			// create
 			jdbcTemplate.update(query, params);
-			// search
-			emp = this.findEmployeeByLogin(login);
 
-		} catch (EmptyResultException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (Exception e) {
-			logger.info("Error: " + e.getMessage());
+			//logger.error("Error: " + e.getMessage());
 			throw new DAOException(e.getMessage());
 		}
 		

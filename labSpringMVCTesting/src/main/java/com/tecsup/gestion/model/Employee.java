@@ -1,15 +1,28 @@
 package com.tecsup.gestion.model;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import org.hibernate.validator.constraints.Range;
+
 public class Employee {
 
-	String login;
-	String password;
 	int employeeId;
+
+	@NotEmpty
+	String login;
+
+	@NotEmpty
+	String password;
+
+	@NotEmpty
 	String firstname;
+
+	@NotEmpty
 	String lastname;
+		
+	@Range(min = 1, max = 5000)
 	int salary;
 
-	
 	/**
 	 * 
 	 * @param login

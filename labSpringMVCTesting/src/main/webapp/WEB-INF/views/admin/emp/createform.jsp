@@ -22,24 +22,24 @@
 	<div class="container-fluid">
 		<div class="row-fluid">
 			<div class="col-md-6">
-				<h4 class="text-center">Edit Employee</h4>
-				<hr>
-				<form:form method="post"  servletRelativeAction="/admin/emp/editsave" modelAttribute="employee" >
-					<form:hidden path="employeeId" />
+				<h4 class="text-center">Create Employee</h4>
+				<hr><form:errors path = "salary" />
+				<form:form method="post" action="create" modelAttribute="employee">
+				
 					<div class="form-group">
 						<label for="login">Login: </label>
-						<form:input path="login" class="form-control" readonly="true" />
-							
+						<form:input path="login" class="form-control" />
+						<form:errors path="login" cssClass="error" />
 					</div>
 					<div class="form-group">
 						<label for="password">Password: </label>
 						<form:input path="password" class="form-control" />
-						<form:errors path="password" cssClass="error" />
+						<form:errors path="password" cssClass="error" />	
 					</div>
 					<div class="form-group">
 						<label for="firstname">Firstname: </label>
 						<form:input path="firstname" class="form-control" />
-						<form:errors path="firstname" cssClass="error" />			
+						<form:errors path="firstname" cssClass="error" />						
 					</div>
 					<div class="form-group">
 						<label for="lastname">Lastname: </label>
@@ -48,7 +48,7 @@
 					</div>
 					<div class="form-group">
 						<label for="salary">Salary: </label>
-						<form:input path="salary" class="form-control" />
+						<form:input path="salary"  class="form-control"/>
 						<form:errors path="salary" cssClass="error" />
 					</div>
 					<%-- 
@@ -56,9 +56,9 @@
 						<label for="department.departmentId">Department: </label>
 						<form:select path="department.departmentId" items="${departmentList}" />
 					</div>
-					--%>	
+					--%>
 					<div class="form-group">
-						<input type="submit" value="Save" class="btn btn-success" />
+						<input type="submit" value="Create" class="btn btn-success" />
 						<a href="<%=request.getContextPath()%>/admin/emp/list" class="btn btn-danger">Cancel</a>
 					</div>
 				</form:form>
