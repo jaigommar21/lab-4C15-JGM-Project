@@ -1,18 +1,12 @@
 package com.tecsup.gestion.model;
 
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
+
 import org.hibernate.validator.constraints.Range;
 
-public class Employee {
+public class Employee extends Credential {
 
 	int employeeId;
-
-	@NotEmpty
-	String login;
-
-	@NotEmpty
-	String password;
 
 	@NotEmpty
 	String firstname;
@@ -32,9 +26,7 @@ public class Employee {
 	 * @param salary
 	 */
 	public Employee(String login, String password, String firstname, String lastname, int salary) {
-		super();
-		this.login = login;
-		this.password = password;
+		super(login, password);
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.salary = salary;
@@ -42,22 +34,6 @@ public class Employee {
 
 	public Employee() {
 		super();
-	}
-
-	public String getLogin() {
-		return login;
-	}
-
-	public void setLogin(String login) {
-		this.login = login;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
 	}
 
 	public int getEmployeeId() {
