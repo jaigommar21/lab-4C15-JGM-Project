@@ -89,7 +89,7 @@ public class EmployeeDAOTest {
 		
 	}
 
-//	@Test
+	@Test
 	public void testFindEmployeeByLogin() {
 
 		try {
@@ -111,7 +111,7 @@ public class EmployeeDAOTest {
 
 	}
 
-//	@Test
+	@Test
 	public void testCreateEmployee() {
 
 		logger.info("--");
@@ -146,7 +146,7 @@ public class EmployeeDAOTest {
 
 	
 	
-//	@Test
+	@Test
 	public void testUpdateEmployee() {
 
 		String LOGIN = "jgomez" + (int)(Math.random() * 100);
@@ -184,7 +184,7 @@ public class EmployeeDAOTest {
 	}
 	
 	
-//	@Test
+	@Test
 	public void testDeleteEmployee() {
 
 		String LOGIN = "jromero";
