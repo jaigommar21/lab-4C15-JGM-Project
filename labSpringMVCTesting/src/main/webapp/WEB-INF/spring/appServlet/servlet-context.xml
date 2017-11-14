@@ -27,7 +27,7 @@
 		<beans:property name="dataSource" ref="dataSource" />
 	</beans:bean>
 
-	 <!-- 
+	  
 	<beans:bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
@@ -36,7 +36,7 @@
 		<beans:property name="password" value="" />
 	</beans:bean>
 
-	-->
+	<!--
 	<beans:bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
@@ -44,6 +44,7 @@
 		<beans:property name="username" value="4C15" />
 		<beans:property name="password" value="4C15" />
 	</beans:bean>
+	-->
 	
 	<!--
         - Message source for this context, loaded from localized "messages_xx" files.
